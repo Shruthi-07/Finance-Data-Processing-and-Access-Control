@@ -809,8 +809,8 @@ window.onerror = function (msg, url, line) {
   console.error("JS ERROR:", msg, "at line", line);
 };
 //  CONFIG & STATE
-let API_BASE = localStorage.getItem('api_base') || 'https://finance-data-processing-and-access-f9d3.onrender.com';
-let currentUser = null;  // { id, name, role, email }
+let API_BASE = localStorage.getItem('api_base')  || 'https://finance-data-processing-and-access-f9d3.onrender.com/';
+let currentUser = null;  
 let authToken   = null;
 let debounceTimer = null;
 let chartPie = null, chartLine = null, chartDashPie = null, chartDashLine = null;
