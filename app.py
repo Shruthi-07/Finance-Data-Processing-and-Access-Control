@@ -1,19 +1,17 @@
 from flask import Flask, jsonify, render_template
 from flask_cors import CORS
 from config import Config
-from extensions import limiter
+from extensions import limiter, init_db
 import mysql.connector
 from routes.auth_routes import auth_bp
-from extensions import init_db
 
-init_db(app)
 MYSQL_SSL_CA = "ca.pem"
 
 print("✅ Database setup done!")
 
 app = Flask(__name__)
 app.config.from_object(Config)
-
+init_db(app)
 CORS(app)
 limiter.init_app(app)
 
