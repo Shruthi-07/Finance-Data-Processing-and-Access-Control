@@ -9,6 +9,5 @@ def get_connection():
         port=Config.MYSQL_PORT,
         user=Config.MYSQL_USER,
         password=Config.MYSQL_PASSWORD,
-        database=Config.MYSQL_DB,
-        ssl_ca=os.getenv("MYSQL_SSL_CA", "ca.pem")
+        database=Config.MYSQL_DB
     )
