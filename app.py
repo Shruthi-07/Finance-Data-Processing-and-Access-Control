@@ -4,7 +4,9 @@ from config import Config
 from extensions import limiter
 import mysql.connector
 from routes.auth_routes import auth_bp
+from extensions import init_db
 
+init_db(app)
 MYSQL_SSL_CA = "ca.pem"
 
 print("✅ Database setup done!")
