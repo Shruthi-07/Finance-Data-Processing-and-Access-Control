@@ -493,7 +493,7 @@
   <div class="api-bar">
     <div class="api-dot" id="api-dot"></div>
     <span>API:</span>
-    <input type="text" id="api-base-input" value="http://127.0.0.1:5000" oninput="updateApiBase(this.value)" />
+    <input type="text" id="api-base-input" value="https://finance-data-processing-and-access-f9d3.onrender.com" oninput="updateApiBase(this.value)" />
     <span id="api-status-text" style="color:var(--muted)">checking…</span>
     <div style="margin-left:auto; display:flex; align-items:center; gap:8px;">
       <span style="font-size:11px; color:var(--muted)" id="theme-label">Dark</span>
@@ -809,7 +809,7 @@ window.onerror = function (msg, url, line) {
   console.error("JS ERROR:", msg, "at line", line);
 };
 //  CONFIG & STATE
-let API_BASE = localStorage.getItem('api_base') || 'http://127.0.0.1:5000';
+let API_BASE = localStorage.getItem('api_base') || 'https://finance-data-processing-and-access-f9d3.onrender.com';
 let currentUser = null;  // { id, name, role, email }
 let authToken   = null;
 let debounceTimer = null;
@@ -1016,7 +1016,7 @@ function doForgotPassword() {
     return;
   }
 
-  fetch("http://127.0.0.1:5000/api/auth/forgot-password", {
+  fetch("https://finance-data-processing-and-access-f9d3.onrender.com/api/auth/forgot-password", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
